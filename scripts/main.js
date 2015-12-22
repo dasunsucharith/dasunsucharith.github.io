@@ -1,4 +1,4 @@
-var myImage = document.querySelector('img');
+/*var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
@@ -7,7 +7,30 @@ myImage.onclick = function() {
     } else {
       myImage.setAttribute ('src','images/dasun2.jpg');
     }
-}
+}*/
+
+<div class = "TestRotator">
+<img src="images/dasun.jpg" alt="rotating" id="rotator">
+<script type="text/javascript">
+(function () {
+    var rotator = document.getElementById('rotator'); // change to match image ID
+    var imageDir = 'images/';
+    var delayInSeconds = 5;
+    // set number of seconds delay
+    // list image names
+    var images = ['dasun1.jpg', 'dasun2.jpg'];
+    var num = 0;
+    var changeImage = function () {
+        var len = images.length;
+        rotator.src = imageDir + images[num++];
+        if (num == len) {
+            num = 0;
+        }
+    };
+    setInterval(changeImage, delayInSeconds * 1000);
+})();
+</script>
+</div>
 
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
