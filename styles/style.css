@@ -1,6 +1,11 @@
 html {
   font-size: 20px;
   font-family: 'Indie Flower', cursive;
+  text-align:center;
+}
+
+ul li {
+	list-style:none;
 }
 
 strong {
