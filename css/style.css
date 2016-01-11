@@ -1,0 +1,25 @@
+@charset "utf-8";
+.body {
+	background-color:#8ED9B5;
+}
+.jumbotron h1 {
+	text-align: center;
+}
+.jumbotron p {
+	text-align: center;
+}
+.thumbnail .caption h3 {
+	text-align: center;
+}
+.thumbnail .caption p {
+	text-align: center;
+}
+.jumbotron {
+	background-color: #FFB176;
+}
+.navbar {
+	background-color:#87DCE0;	
+}
+.home {
+	background-color:#E59495;
+}
