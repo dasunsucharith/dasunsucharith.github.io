@@ -1,0 +1,398 @@
+
+@import "font.css";
+@import "apps.css";
+@import "designPG.css";
+@import "dragdealer.css";
+@import "pages.css";
+@import "style.css";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+
+body, html {
+	background-color: #aaff80;
+	margin: 0;
+}
+
+.creame_c {
+    color: #3e3e28;
+}
+
+.container-main {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.user_wrapper {
+    background-color: transparent;
+    border: 1px solid red;
+    bottom: 0;
+    height: 200px;
+    left: 0;
+    margin: auto;
+    padding: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    z-index: 10000;
+}
+.logo_wrap {
+	background: rgba(0, 0, 0, 0) url("../assets/svg/logo_roll.svg") no-repeat scroll 0 0;
+    border: 1px dashed red;
+    border-radius: 100px;
+    float: left;
+    height: 198px;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    width: 198px;
+}
+
+.logo_wrap:hover {
+    background: #44cc00 url("../assets/svg/logo_roll.svg") no-repeat scroll 0 -200px;
+}
+
+.logo_text_wrap {
+    float: right;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    width: 300px;
+}
+.name_wrap {
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.8;
+    text-indent: 10px;
+    width: 100%;
+    color: #3e3e28;
+}
+.descr_wrap {
+    color: #3e3e28;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.8;
+    text-indent: 10px;
+    width: 100%;
+}
+.task_wrap {
+    float: left;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.8;
+    text-align: left;
+    text-indent: 5px;
+    width: 100%;
+}
+.about_wrapper {
+    background-color: transparent;
+    bottom: 0;
+    height: 500px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+}
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+#particles-js {
+    background-color: transparent;
+    background-image: url("");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.count-particles {
+    background: #000022 none repeat scroll 0 0;
+    color: #13e8e9;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    left: 0;
+    line-height: 14px;
+    padding-bottom: 2px;
+    position: absolute;
+    text-align: left;
+    text-indent: 4px;
+    top: 48px;
+    width: 80px;
+}
+.js-count-particles {
+    font-size: 1.1em;
+}
+.logo-wrapper-about {
+    height: 200px;
+    width: 100%;
+}
+.logo_about {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/mi6_logo.svg") repeat scroll 0 0;
+    border: 1px dashed rgba(123, 187, 214, 0.2);
+    border-radius: 100px;
+    float: left;
+    height: 198px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    width: 198px;
+}
+.logo_about:hover {
+    border: 1px dashed rgba(123, 187, 214, 1);
+}
+.dark {
+    background-color: #223242;
+}
+.text_div_ab {
+    color: #eee;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    height: auto;
+    line-height: 40px;
+    margin-top: 240px;
+    opacity: 0.8;
+    position: absolute;
+    text-align: center;
+    text-indent: 10px;
+    width: 100%;
+    word-wrap: break-word;
+}
+.social_btns_ab {
+    bottom: 0;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+}
+.sbtn {
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out 0s;
+    width: 30px;
+}
+.sbtn:hover {
+    opacity: 1;
+}
+.social_block {
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+}
+.facebook {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/facebook_icon.svg") repeat scroll 0 0;
+}
+.youtube {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/youtube_icon.svg") repeat scroll 0 0;
+}
+.vimeo {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/vimeo_icon.svg") repeat scroll 0 0;
+}
+.gitHub {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/GitHub.svg") repeat scroll 0 0;
+}
+.devian {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/devart_icon.svg") repeat scroll 0 0;
+}
+.gplus {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/gplus_icon.svg") repeat scroll 0 0;
+}
+.codepen {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/code-pen_icon.svg") repeat scroll 0 0;
+}
+
+.logo_wrap_ab {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/logo_roll.svg") no-repeat scroll 0 0;
+    border: 1px dashed red;
+    border-radius: 100px;
+    float: left;
+    height: 198px;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    width: 198px;
+}
+.logo_wrap_ab:hover {
+    background: #7bbbd6 url("../assets/svg/logo_roll.svg") no-repeat scroll 0 -200px;
+}
+.blue_c {
+    color: #223242;
+}
+.edgelogo {
+    background-color: #202020;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    height: 55px;
+    left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 6px;
+    position: fixed;
+    top: 0;
+    width: 55px;
+    z-index: 20000;
+}
+.logo {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/mi6_logo.svg") repeat scroll 0 0;
+    height: 40px;
+    margin-left: 7px;
+    margin-top: 7px;
+    width: 40px;
+}
+.pghead {
+    display: block;
+    height: 60px;
+    left: 0;
+    margin-left: 75px;
+    position: fixed;
+    top: 0;
+    width: auto;
+    z-index: 20000;
+}
+.heading {
+    float: left;
+    font-family: "Roboto",sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 60px;
+    margin-left: 5px;
+    opacity: 0.54;
+}
+.blue {
+    color: #2196f3;
+}
+.aka_text {
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.8;
+    text-indent: 10px;
+    width: 100%;
+}
+.nav_wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    height: 40px;
+    margin-right: 60px;
+    margin-top: 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 405px;
+    z-index: 10000;
+}
+#nav_btn {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #eee;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 10px;
+    margin-top: 10px;
+    opacity: 0.8;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition: all 0.3s ease-in-out 0s;
+    width: 50px;
+    z-index: 10000;
+}
+#nav_btn:hover {
+    opacity: 1;
+}
+.nav_text {
+    color: #eee;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 40px;
+    opacity: 1;
+    padding-left: 5px;
+    text-align: center;
+}
+.comming_soon_wrapper {
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.soon_text {
+    color: #eee;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 60px;
+    opacity: 0.8;
+    text-align: center;
+    text-indent: 10px;
+    width: 100%;
+}
+.goback_text {
+    bottom: 0;
+    color: #2196f3;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 10px;
+    width: 200px;
+}
+scratch {
+    color: dimgray;
+    font-style: oblique;
+}
+a {
+    color: red;
+    text-decoration: none;
+}
+a.link {
+    color: red;
+    opacity: 0.82;
+    text-decoration: none;
+}
+a.visited {
+    color: red;
+    opacity: 0.82;
+    text-decoration: none;
+}
+a.hover {
+    color: red;
+    opacity: 1;
+    text-decoration: none;
+}

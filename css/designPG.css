@@ -1,0 +1,176 @@
+
+#loaderbg {
+    background-color: #000000;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50000;
+}
+.loading-wrap {
+    bottom: 0;
+    height: 150px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    z-index: 60000;
+}
+.spinner {
+    animation: 1.2s ease-in-out 0s normal none infinite running sk-rotateplane;
+    background: rgba(0, 0, 0, 0) url("../assets/svg/mi6_logo.svg") repeat scroll 0 0;
+    height: 150px;
+    margin: auto;
+    width: 150px;
+}
+.bg-black {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    z-index: 60;
+}
+@keyframes sk-rotateplane {
+0% {
+    transform: perspective(190px) rotateX(0deg) rotateY(0deg);
+}
+50% {
+    transform: perspective(190px) rotateX(0deg) rotateY(360deg);
+}
+100% {
+    transform: perspective(190px) rotateX(0deg) rotateY(360deg);
+}
+}
+#sweeping_wrapper {
+    background-color: transparent;
+    height: 2000px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 200;
+}
+#grid {
+    background: rgba(0, 0, 0, 0) url("../assets/image/grid.png") repeat scroll 100px 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.card_holder {
+    background: purple none repeat scroll 0 0;
+    color: white;
+    height: 250px;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    z-index: 0;
+}
+.card_holder:hover {
+}
+.cards {
+    float: left;
+    height: 270px;
+    position: relative;
+    width: 480px;
+}
+.cards:hover {
+    opacity: 1;
+}
+.minbox {
+    border: 1px solid transparent;
+    height: 268px;
+    transition: all 0.3s ease-in-out 0s;
+    width: 478px;
+}
+.minbox:hover {
+    border-color: #2196f3;
+    box-shadow: 0 0 15px 0 rgba(33, 149, 243, 1);
+    position: relative;
+    z-index: 605;
+}
+.minbox:hover .imgbg_dark {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.minbox:hover .link_direct {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/link_icon.svg") repeat scroll 0 0;
+}
+.link_direct {
+    height: 30px;
+    margin-left: 224px;
+    margin-top: 119px;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    width: 30px;
+    z-index: 300;
+}
+.link_direct:hover {
+    background: rgba(0, 0, 0, 0) url("../assets/svg/link_icon.svg") repeat scroll 0 0;
+}
+.image_wrapper {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.imgbg_dark {
+    background-color: rgba(0, 0, 0, 0.64);
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    width: 100%;
+    z-index: 50;
+}
+.imgbg_dark:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.content_sort_wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    height: 30px;
+    left: 0;
+    margin-bottom: 20px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 10000;
+}
+.social_btns {
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+}
+#msg_inform {
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 220px;
+    z-index: 15000;
+}
+.inform_text {
+    color: #1a4c6d;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+    opacity: 1;
+    text-align: center;
+}
