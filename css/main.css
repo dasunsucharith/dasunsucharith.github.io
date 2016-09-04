@@ -8,12 +8,12 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
 
 body, html {
-	background-color: #aaff80;
+	background-color: #990000;
 	margin: 0;
 }
 
 .creame_c {
-    color: #3e3e28;
+    color: #fff;
 }
 
 .container-main {
@@ -24,7 +24,7 @@ body, html {
 
 .user_wrapper {
     background-color: transparent;
-    border: 1px solid red;
+    border: 1px solid #660000;
     bottom: 0;
     height: 200px;
     left: 0;
@@ -38,7 +38,7 @@ body, html {
 }
 .logo_wrap {
 	background: rgba(0, 0, 0, 0) url("../assets/svg/logo_roll.svg") no-repeat scroll 0 0;
-    border: 1px dashed red;
+    border: 1px dashed #660000;
     border-radius: 100px;
     float: left;
     height: 198px;
@@ -48,7 +48,7 @@ body, html {
 }
 
 .logo_wrap:hover {
-    background: #44cc00 url("../assets/svg/logo_roll.svg") no-repeat scroll 0 -200px;
+    background: #660000 url("../assets/svg/logo_roll.svg") no-repeat scroll 0 -200px;
 }
 
 .logo_text_wrap {
@@ -67,10 +67,10 @@ body, html {
     opacity: 0.8;
     text-indent: 10px;
     width: 100%;
-    color: #3e3e28;
+    color: #fff;
 }
 .descr_wrap {
-    color: #3e3e28;
+    color: #fff;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-weight: 400;
