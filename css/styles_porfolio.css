@@ -26,13 +26,12 @@ body {
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
     padding: 0 30px;
-    top: 0;
-    right: 0;
-    z-index: 0;
     opacity: 1;
+}
+
+.main-content {
+    padding-left: 20px; 
 }
 
 .padd-15 {
@@ -58,7 +57,17 @@ body {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
     background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
 
 ::before, ::after {
@@ -102,7 +111,7 @@ ul {
 
 .aside .logo a span {
     font-family: 'Clicker Script', cursive;
-    font-family: 40px;
+    font-size: 40px;
 }
 
 .aside .logo a::before {
@@ -241,6 +250,32 @@ h3.my-profession {
     position: relative;
 }
 
+.home-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    right: 60px;
+    bottom: -40px;
+
+}
+
+.home-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    left: 60px;
+    top: -40px;
+
+}
+
 .home .home-img img {
+    margin: auto;
+    border-radius: 5px;
     height: 400px;
 }
