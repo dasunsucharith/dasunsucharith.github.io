@@ -98,3 +98,23 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
             aside.classList.remove("open")
         }
     } */
+
+
+function sendEmail() {
+    Email.send({
+        SecureToken : "3a6a4cb2-040a-485d-ae1a-861c7534aeef",
+        To : 'sucharith.dasun@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : document.getElementById("subject").value,
+        Body : document.getElementById("message").value,
+        /* Host : "smtp.elasticemail.com",
+        Username : "sucharith.dasun@gmail.com",
+        Password : "575D1357C094C18C8CD2B756F91C81EE5D9C",
+        To : 'sucharith.dasun@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : document.getElementById("subject").value,
+        Body : document.getElementById("message").value */
+    }).then(
+      message => alert(message)
+    )
+}
