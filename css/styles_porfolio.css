@@ -14,6 +14,7 @@ body.dark {
     --bg-black-50: #393939;
     --text-black-900: #ffffff;
     --text-black-700: #e9e9e9;
+
 }
 
 body {
@@ -708,6 +709,10 @@ h3.my-profession {
     margin: 15px 0 5px;
 }
 
+.contact .contact-info-item p {
+    color: var(--text-black-900);
+}
+
 .contact .contact-form {
     flex: 0 0 100%;
     max-width: 100%;
@@ -831,7 +836,7 @@ h3.my-profession {
     .about .about-content .skills,
     .about .about-content .personal-info {
         flex: 0 0 100%;
-        /* max-width: 100% */;
+        max-width: 100%;
     }
 
     .container {
