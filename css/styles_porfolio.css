@@ -52,6 +52,15 @@ body {
     animation: slideSelection 1s ease;
 }
 
+@keyframes slideSelection {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 .hidden {
     display: none !important;
 }
