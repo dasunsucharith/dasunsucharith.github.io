@@ -49,6 +49,7 @@ body {
 .section.active {
     z-index: 2;
     opacity: 1;
+    animation: slideSelection 1s ease;
 }
 
 .hidden {

@@ -14,6 +14,8 @@ var typed = new Typed(".typing-about", {
 
 const nav = document.querySelector(".nav"), navList = nav.querySelectorAll("li"),
 totalNavlist = navList.length 
+allSelection = document.querySelectorAll(".section"),
+totalSelection = allSelection.length
 
 for (let i = 0; i < totalNavlist; i++){
     const a = navList[i].querySelector("a")
@@ -28,6 +30,9 @@ for (let i = 0; i < totalNavlist; i++){
 }
 
 function showSelection(element){
+    for (let i = 0; i < totalSelection; i++){
+        allSelection[i].classList.remove("active")
+    }
     const target = element.getAttribute("href").split("#")[1]
     document.querySelector("#" + target).classList.add("active")
 }
