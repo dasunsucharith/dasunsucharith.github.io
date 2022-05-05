@@ -12,7 +12,8 @@ var typed = new Typed(".typing-about", {
     loop: true
 })
 
-const nav = document.querySelector(".nav"), navList = nav.querySelectorAll("li"),
+const nav = document.querySelector(".nav"), 
+navList = nav.querySelectorAll("li"),
 totalNavlist = navList.length 
 allSelection = document.querySelectorAll(".section"),
 totalSelection = allSelection.length
@@ -20,12 +21,14 @@ totalSelection = allSelection.length
 for (let i = 0; i < totalNavlist; i++){
     const a = navList[i].querySelector("a")
     a.addEventListener("click", function() {
-        for (let i = 0; i < totalSelection; i++){
+        /* for (let i = 0; i < totalSelection; i++){
             allSelection[i].classList.remove("back-section")
-        }
+        } */
+        removeBackSection()
         for (let j = 0; j < totalNavlist; j++){
             if(navList[j].querySelector("a").classList.contains("active")){
-                allSelection[j].classList.add("back-section")
+                addBackSection(j)
+                //allSelection[j].classList.add("back-section")
             }
             navList[j].querySelector("a").classList.remove("active")
         }
@@ -39,6 +42,16 @@ for (let i = 0; i < totalNavlist; i++){
     })
 }
 
+function removeBackSection() {
+    for (let i = 0; i < totalSelection; i++){
+        allSelection[i].classList.remove("back-section")
+    }
+}
+
+function addBackSection(num) {
+    allSelection[num].classList.add("back-section")
+}
+
 function showSelection(element){
     for (let i = 0; i < totalSelection; i++){
         allSelection[i].classList.remove("active")
@@ -47,9 +60,27 @@ function showSelection(element){
     document.querySelector("#" + target).classList.add("active")
 }
 
+function updateNav(element){
+    for(let i = 0; i < totalNavlist; i++){
+        navList[i].querySelector("a").classList.remove("active")
+        const target = element.getAttribute("href").split("#")[1]
+        if(target === navList[i].querySelector("a").getAttribute("href").split("#")[1]){
+            navList[i].querySelector("a").classList.add("active")
+        }
+    }
+}
+
+document.querySelector(".hire-me").addEventListener("click", function(){
+    const sectionIndex = this.getAttribute("data-section-index")
+    showSelection(this)
+    updateNav(this)
+    removeBackSection()
+    addBackSection(sectionIndex)
+})
+
 const navTogglerBtn = document.querySelector(".nav-toggler"),
-    aside = document.querySelector(".aside"),
-    mainContent = document.querySelector(".main-content")
+    aside = document.querySelector(".aside")
+
     navTogglerBtn.addEventListener("click", () => {
         asideSectionTogglerBtn()
         mainContentTogglerBtn()
