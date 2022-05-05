@@ -23,5 +23,11 @@ for (let i = 0; i < totalNavlist; i++){
         }
 
         this.classList.add("active")
+        showSelection(this)
     })
+}
+
+function showSelection(element){
+    const target = element.getAttribute("href").split("#")[1]
+    document.querySelector("#" + target).classList.add("active")
 }
