@@ -81,7 +81,7 @@ body {
 }
 
 .container {
-    min-width: 1000px;
+    min-width: 1201px;
     width: 100%;
     margin: auto;
 }
@@ -757,14 +757,14 @@ h3.my-profession {
     padding: 0px 50px;
 }
 
-@media (max-width:1199px){
+@media (max-width:1200px){
 
     .section .container {
         padding-top: 70px;
     }
 
     .container {
-        min-width: 991px;
+        min-width: 1025px;
     }
 
     .aside {
@@ -802,7 +802,7 @@ h3.my-profession {
     }
 }
 
-@media (max-width: 991px){
+@media (max-width: 1024px){
 
     .contact .contact-info-item,
     .portfolio .portfolio-item,
@@ -812,7 +812,7 @@ h3.my-profession {
     }
 
     .container {
-        min-width: 767px;
+        min-width: 769px;
     }
 
     .home .home-info {
@@ -825,7 +825,7 @@ h3.my-profession {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .contact .contact-form .col-6,
     .contact .contact-info-item,
@@ -840,11 +840,11 @@ h3.my-profession {
     }
 
     .container {
-        min-width: 400px;
+        min-width: 481px;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
 
     .contact .contact-form .col-6,
     .contact .contact-info-item,
@@ -860,6 +860,6 @@ h3.my-profession {
     }
 
     .container {
-        min-width: 300px;
+        min-width: 320px;
     }
 }
