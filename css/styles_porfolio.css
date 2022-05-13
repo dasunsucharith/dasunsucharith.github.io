@@ -484,13 +484,40 @@ h3.my-profession {
     margin-bottom: 25px;
 }
 
-.about .about-content .skills .skill-item .progress .progress-in {
-    position: absolute;
+.progress-in {
+    width: 50%;
+    position: relative;
     left: 0;
     top: 0;
     height: 100%;
     border-radius: 4px;
     background-color: var(--skin-color);
+    transition: 3s linear;
+}
+
+.progress-in::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: var(--skin-color);
+    color: #ffffff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.progress-in::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--skin-color);
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
 }
 
 .about .about-content .skills .skill-item .skill-percent {
