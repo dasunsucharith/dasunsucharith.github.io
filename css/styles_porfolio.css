@@ -691,7 +691,32 @@ h3.my-profession {
     margin-bottom: 40px;
 }
 
+.github-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
 .portfolio .portfolio-heading h2 {
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.portfolio .portfolio-img h4 {
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.portfolio .portfolio-heading h3 {
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.portfolio .portfolio-heading li {
     color: var(--text-black-900);
     font-weight: 500;
 }
