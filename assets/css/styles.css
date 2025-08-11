@@ -92,7 +92,10 @@
     }
     .card:hover{ transform: translateY(-3px); filter: saturate(1.1) }
     .card h3{ margin:6px 0 8px; font-family:"Press Start 2P"; font-size:16px; color:var(--accent)}
-    .card p{ margin:0; color:var(--muted); font-size:18px; min-height:50px}
+    .card img {
+      width: 28px;
+      height: 28px;
+    }
     .tagbar{ display:flex; gap:6px; flex-wrap:wrap; margin-top:14px }
     .tag{ border:2px solid #24324b; padding:6px 8px; border-radius:8px; color:#b5c6dd; font-size:16px }
     .go{ position:absolute; right:12px; bottom:12px; border:0; border-radius:8px; background:linear-gradient(180deg,#5df2d6,#37cbb2); color:#07271f; padding:8px 12px; font-weight:800; text-decoration:none }

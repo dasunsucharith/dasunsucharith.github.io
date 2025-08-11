@@ -23,7 +23,7 @@
   const count = document.getElementById('count');
   function render(items){
     grid.innerHTML = items.map((a,i)=>`<article class="card scanlines" role="listitem" tabindex="0" data-index="${i}">
-        <div style="font-size:28px">${a.icon || '🧩'}</div>
+        <div style="font-size:28px">${a.icon.startsWith('<img') ? a.icon : (a.icon || '🧩')}</div>
         <h3>${a.title}</h3>
         <p>${a.description}</p>
         <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
