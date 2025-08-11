@@ -23,11 +23,15 @@
   const count = document.getElementById('count');
   function render(items){
     grid.innerHTML = items.map((a,i)=>`<article class="card scanlines" role="listitem" tabindex="0" data-index="${i}">
-        <div style="font-size:28px">${a.icon.startsWith('<img') ? a.icon : (a.icon || '🧩')}</div>
-        <h3>${a.title}</h3>
+        <div class="card-header">
+          <div class="card-icon">${a.icon.startsWith('<img') ? a.icon : (a.icon || '🧩')}</div>
+          <h3>${a.title}</h3>
+        </div>
         <p>${a.description}</p>
-        <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
-        <a class="go" href="${a.url}" aria-label="Open ${a.title}">Open →</a>
+        <div class="card-footer">
+          <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
+          <a class="go" href="${a.url}" aria-label="Open ${a.title}">OPEN</a>
+        </div>
       </article>`).join('');
     empty.style.display = items.length? 'none':'block';
     count.textContent = `${items.length} app${items.length!==1?'s':''}`;

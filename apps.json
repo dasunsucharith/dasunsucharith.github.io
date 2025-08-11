@@ -1,6 +1,6 @@
 [
     { "title": "Invoicing App", "slug": "invoicing-app", "url": "/invoicing-app/", "icon": "<img src='assets/img/favicon-invoice-app.png' alt='Invoicing App Icon'>", "tags":["billing","pdf"], "description": "Create and download clean invoices in seconds." },
-    { "title": "TripForge (AI Travel Planner)", "slug": "tripforge", "url": "/tripforge/", "icon": "🗺️", "tags":["ai","travel","planner"], "description": "Plan Sri Lanka trips with budget filters and smart itineraries." },
+    { "title": "Image Cropper & Exporter", "slug": "image-cropper-exporter", "url": "https://dasunsucharith.github.io/image-cropper-exporter/", "icon": "<img src='assets/img/favicon-image-cropper.webp' alt='Image Cropper Icon'>", "tags":["image","cropper","export","photo"], "description": "Upload, crop, and export images in multiple formats with custom aspect ratios." },
     { "title": "Pixel Icon Maker", "slug": "pixel-icon-maker", "url": "/pixel-icon-maker/", "icon": "🧊", "tags":["icons","pixel","design"], "description": "Generate pixel / voxel‑style icons for your apps." },
     { "title": "Link UTM Builder", "slug": "utm-builder", "url": "/utm-builder/", "icon": "🔗", "tags":["marketing","seo"], "description": "Zero‑friction UTM generator with copy buttons." },
     { "title": "Email Tester", "slug": "email-tester", "url": "/email-tester/", "icon": "✉️", "tags":["email","deliverability"], "description": "Check subject line length, preview preheader, and spammy words." },
