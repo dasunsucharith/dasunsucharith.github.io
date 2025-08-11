@@ -1,5 +1,4 @@
-
-    :root{
+:root{
       --bg:#0c1018;          /* deep space */
       --panel:#141a24;       /* panel canvas */
       --alt:#0a0e14;         /* darker */
@@ -120,4 +119,13 @@
       .title{display:none}
       .hero{padding:18px}
       .card p{min-height:unset}
+    }
+
+    h2#apps {
+      font-family: 'Press Start 2P';
+      font-size: 18px;
+      color: var(--accent-2);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 22px 6px;
     }

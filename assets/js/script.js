@@ -1,5 +1,4 @@
-
-  // ===== Starfield background (lightweight) =====
+// ===== Starfield background (lightweight) =====
   const starCanvas = document.getElementById('stars');
   const sctx = starCanvas.getContext('2d');
   let stars = [], w = 0, h = 0, scale = devicePixelRatio || 1;
@@ -7,15 +6,16 @@
   function drawStars(){ sctx.clearRect(0,0,w,h); for(const s of stars){ const size = s.z * (scale>1? 2:1); sctx.fillStyle = Math.random() < .002 ? '#ffdd57' : (Math.random()<.004 ? '#ff7ad6' : '#5df2d6'); sctx.fillRect(s.x, s.y, size, size); s.y += s.z * 0.35; if(s.y>h){ s.y = -2; s.x = Math.random()*w; } } requestAnimationFrame(drawStars) }
   addEventListener('resize', resizeStars, {passive:true}); resizeStars(); drawStars();
 
+  let apps = [];
+
   // ===== App directory (edit here to add new apps) =====
-  const apps = [
-    { title: 'Invoicing App', slug: 'invoicing-app', url: '/invoicing-app/', icon: '🧾', tags:['billing','pdf'], description: 'Create and download clean invoices in seconds.' },
-    { title: 'TripForge (AI Travel Planner)', slug: 'tripforge', url: '/tripforge/', icon: '🗺️', tags:['ai','travel','planner'], description: 'Plan Sri Lanka trips with budget filters and smart itineraries.' },
-    { title: 'Pixel Icon Maker', slug: 'pixel-icon-maker', url: '/pixel-icon-maker/', icon: '🧊', tags:['icons','pixel','design'], description: 'Generate pixel / voxel‑style icons for your apps.' },
-    { title: 'Link UTM Builder', slug: 'utm-builder', url: '/utm-builder/', icon: '🔗', tags:['marketing','seo'], description: 'Zero‑friction UTM generator with copy buttons.' },
-    { title: 'Email Tester', slug: 'email-tester', url: '/email-tester/', icon: '✉️', tags:['email','deliverability'], description: 'Check subject line length, preview preheader, and spammy words.' },
-    { title: 'JSON to CSV', slug: 'json-csv', url: '/json-csv/', icon: '🧰', tags:['data','utility'], description: 'Drag‑drop JSON and download as CSV.' }
-  ];
+  fetch('/apps.json')
+    .then(r=>r.json())
+    .then(list=>{
+      apps = list;
+      render(apps);
+      q.addEventListener('input', () => doFilter(apps));
+    });
 
   // ===== Build grid =====
   const grid = document.getElementById('grid');
@@ -32,16 +32,15 @@
     empty.style.display = items.length? 'none':'block';
     count.textContent = `${items.length} app${items.length!==1?'s':''}`;
   }
-  render(apps);
 
   // ===== Search / keyboard nav =====
   const q = document.getElementById('q');
-  function doFilter(){
+  function doFilter(apps){
     const term = (q.value||'').toLowerCase().trim();
     const filtered = term? apps.filter(a => [a.title, a.description, ...(a.tags||[])].join(' ').toLowerCase().includes(term)) : apps;
     render(filtered);
   }
-  q.addEventListener('input', doFilter);
+  
   addEventListener('keydown', (e)=>{
     if(e.key === '/' && document.activeElement !== q){ q.focus(); e.preventDefault(); }
     if(['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].includes(e.key)){
