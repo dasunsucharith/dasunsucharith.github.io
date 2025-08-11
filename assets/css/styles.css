@@ -34,7 +34,7 @@
     .logo{
       display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--ink);
     }
-    .logo-emoji{font-size:26px; filter: drop-shadow(0 2px 0 #000)}
+    .logo-emoji{font-size:26px; filter: drop-shadow(0 2px 0 #000); width: 26px; height: 26px;}
     .title{
       font-family:"Press Start 2P", system-ui; font-size:14px; line-height:1.2; text-transform:uppercase; letter-spacing:1px;
       color:var(--accent);
