@@ -1,0 +1,11 @@
+
+[
+  {
+    "title": "Acme Digital",
+    "slug": "acme-digital",
+    "url": "https://dasunsucharith.github.io/parallax-path-viewer/",
+    "icon": "<img src='assets/img/websites/web-template.png' alt='Acme Digital Website Template'>",
+    "tags": ["template", "parallax", "business"],
+    "description": "A modern website template with parallax scrolling effects, suitable for digital agencies and businesses."
+  }
+]

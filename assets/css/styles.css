@@ -185,3 +185,13 @@
       text-transform: uppercase;
       margin: 22px 6px;
     }
+
+.card-thumbnail {
+    margin-bottom: 15px;
+}
+
+.card-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}

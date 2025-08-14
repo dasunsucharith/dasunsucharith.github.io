@@ -7,48 +7,87 @@
   addEventListener('resize', resizeStars, {passive:true}); resizeStars(); drawStars();
 
   let apps = [];
+let websites = [];
 
-  // ===== App directory (edit here to add new apps) =====
-  fetch('/apps.json')
-    .then(r=>r.json())
-    .then(list=>{
-      apps = list;
-      render(apps);
-      q.addEventListener('input', () => doFilter(apps));
-    });
+// ===== App directory (edit here to add new apps) =====
+fetch('/apps.json')
+  .then(r=>r.json())
+  .then(list=>{
+    apps = list;
+    render(apps);
+    q.addEventListener('input', () => doFilter(apps, websites));
+  });
 
-  // ===== Build grid =====
-  const grid = document.getElementById('grid');
-  const empty = document.getElementById('empty');
-  const count = document.getElementById('count');
-  function render(items){
-    grid.innerHTML = items.map((a,i)=>`<article class="card scanlines" role="listitem" tabindex="0" data-index="${i}">
-        <div class="card-header">
-          <div class="card-icon">${a.icon.startsWith('<img') ? a.icon : (a.icon || '🧩')}</div>
-          <h3>${a.title}</h3>
-        </div>
-        <p>${a.description}</p>
-        <div class="card-footer">
-          <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
-          <a class="go" href="${a.url}" aria-label="Open ${a.title}">OPEN</a>
-        </div>
-      </article>`).join('');
-    empty.style.display = items.length? 'none':'block';
-    count.textContent = `${items.length} app${items.length!==1?'s':''}`;
-  }
+fetch('/websites.json')
+  .then(r=>r.json())
+  .then(list=>{
+    websites = list;
+    renderWebsites(websites);
+    q.addEventListener('input', () => doFilter(apps, websites));
+  });
 
-  // ===== Search / keyboard nav =====
-  const q = document.getElementById('q');
-  function doFilter(apps){
-    const term = (q.value||'').toLowerCase().trim();
-    const filtered = term? apps.filter(a => [a.title, a.description, ...(a.tags||[])].join(' ').toLowerCase().includes(term)) : apps;
-    render(filtered);
-  }
+// ===== Build grid =====
+const grid = document.getElementById('grid');
+const empty = document.getElementById('empty');
+const websitesGrid = document.getElementById('websites-grid');
+const websitesEmpty = document.getElementById('websites-empty');
+const count = document.getElementById('count');
+
+function render(items){
+  grid.innerHTML = items.map((a,i)=>`<article class="card scanlines" role="listitem" tabindex="0" data-index="${i}">
+      <div class="card-header">
+        <div class="card-icon">${a.icon.startsWith('<img') ? a.icon : (a.icon || '🧩')}</div>
+        <h3>${a.title}</h3>
+      </div>
+      <p>${a.description}</p>
+      <div class="card-footer">
+        <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
+        <a class="go" href="${a.url}" aria-label="Open ${a.title}">OPEN</a>
+      </div>
+    </article>`).join('');
+  empty.style.display = items.length? 'none':'block';
+  updateCount();
+}
+
+function renderWebsites(items){
+  websitesGrid.innerHTML = items.map((a,i)=>`<article class="card scanlines" role="listitem" tabindex="0" data-index="${i}">
+      <div class="card-thumbnail">
+        ${a.icon.startsWith('<img') ? a.icon : ''}
+      </div>
+      <div class="card-header">
+        <h3>${a.title}</h3>
+      </div>
+      <p>${a.description}</p>
+      <div class="card-footer">
+        <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
+        <a class="go" href="${a.url}" aria-label="Open ${a.title}">OPEN</a>
+      </div>
+    </article>`).join('');
+  websitesEmpty.style.display = items.length? 'none':'block';
+  updateCount();
+}
+
+function updateCount(){
+  const appCount = grid.querySelectorAll('.card').length;
+  const websiteCount = websitesGrid.querySelectorAll('.card').length;
+  count.textContent = `${appCount + websiteCount} creation${appCount + websiteCount !==1? 's' : ''}`;
+}
+
+// ===== Search / keyboard nav =====
+const q = document.getElementById('q');
+function doFilter(apps, websites){
+  const term = (q.value||'').toLowerCase().trim();
+  const filteredApps = term? apps.filter(a => [a.title, a.description, ...(a.tags||[])].join(' ').toLowerCase().includes(term)) : apps;
+  const filteredWebsites = term? websites.filter(a => [a.title, a.description, ...(a.tags||[])].join(' ').toLowerCase().includes(term)) : websites;
+  render(filteredApps);
+  renderWebsites(filteredWebsites);
+}
+
   
   addEventListener('keydown', (e)=>{
     if(e.key === '/' && document.activeElement !== q){ q.focus(); e.preventDefault(); }
     if(['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].includes(e.key)){
-      const cards = [...grid.querySelectorAll('.card')];
+      const cards = [...grid.querySelectorAll('.card'), ...websitesGrid.querySelectorAll('.card')];
       const idx = Math.max(0, cards.indexOf(document.activeElement));
       let next = idx + (e.key==='ArrowRight'||e.key==='ArrowDown'?1:-1);
       next = (next + cards.length) % cards.length;
