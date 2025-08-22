@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- KGTN website entry with proper description and cultural tourism tags
 - Redesigned app cards with enhanced pixel aesthetics
 - New card layout with dedicated header, content, and footer sections
 - Larger icon containers (40x40px) with styled borders and gradients
@@ -17,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Subtle background gradients with radial overlays for depth
 
 ### Changed
+- All app and website links now open in new browser windows/tabs for better user experience
 - Replaced TripForge app with Image Cropper & Exporter app
 - Updated app cards to use new visual hierarchy
 - Improved button styling with "OPEN" text and pixel font
@@ -25,6 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated hover animations to be more pronounced
 
 ### Technical
+- Added `target="_blank"` and `rel="noopener"` attributes to all OPEN links for security
+- Updated keyboard navigation to open links in new windows when pressing Enter
 - Restructured card HTML with `.card-header`, `.card-footer` components
 - Added `.card-icon` container with styled background
 - Updated JavaScript render function for new card structure

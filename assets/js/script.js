@@ -42,7 +42,7 @@ function render(items){
       <p>${a.description}</p>
       <div class="card-footer">
         <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
-        <a class="go" href="${a.url}" aria-label="Open ${a.title}">OPEN</a>
+        <a class="go" href="${a.url}" target="_blank" rel="noopener" aria-label="Open ${a.title}">OPEN</a>
       </div>
     </article>`).join('');
   empty.style.display = items.length? 'none':'block';
@@ -60,7 +60,7 @@ function renderWebsites(items){
       <p>${a.description}</p>
       <div class="card-footer">
         <div class="tagbar">${(a.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
-        <a class="go" href="${a.url}" aria-label="Open ${a.title}">OPEN</a>
+        <a class="go" href="${a.url}" target="_blank" rel="noopener" aria-label="Open ${a.title}">OPEN</a>
       </div>
     </article>`).join('');
   websitesEmpty.style.display = items.length? 'none':'block';
@@ -94,7 +94,7 @@ function doFilter(apps, websites){
       cards[next]?.focus();
     }
     if(e.key === 'Enter' && document.activeElement?.classList.contains('card')){
-      const link = document.activeElement.querySelector('.go'); if(link) window.location = link.href;
+      const link = document.activeElement.querySelector('.go'); if(link) window.open(link.href, '_blank');
     }
   });
 

@@ -7,5 +7,13 @@
     "icon": "<img src='assets/img/websites/web-template.png' alt='Acme Digital Website Template'>",
     "tags": ["template", "parallax", "business"],
     "description": "A modern website template with parallax scrolling effects, suitable for digital agencies and businesses."
+  },
+  {
+    "title": "KGTN",
+    "slug": "kgtn",
+    "url": "https://kgtn.online",
+    "icon": "<img src='assets/img/websites/kgtn-web.png' alt='KGTN Website'>",
+    "tags": ["tourism", "cultural", "sri-lanka"],
+    "description": "Kotte Green Tourism Network offers immersive cultural tours of Sri Jayewardenepura Kotte, providing authentic storytelling and sustainable community-led experiences through Sri Lanka's wetland capital."
   }
 ]
